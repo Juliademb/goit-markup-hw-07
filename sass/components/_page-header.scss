@@ -1,0 +1,102 @@
+.header {
+  border-bottom: 1px solid #ececec;
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    width: 145px;
+    margin-right: 93px;
+
+    color: $primary-text-color;
+    font-family: $second-font-family;
+
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+  &__logo--blue {
+    color: $accent-color;
+  }
+}
+.site-nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  display: flex;
+  width: 294px;
+  justify-content: space-between;
+  margin-right: 305px;
+  padding-left: 0px;
+
+  &__link {
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link--active {
+    position: relative;
+  }
+  &__link:hover,
+  &__link:focus,
+  & .site-nav__link--active {
+    color: $accent-color;
+  }
+  &__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -34px;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+
+.contacts {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+
+  &__link {
+    color: $grey-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__mail {
+    width: 161px;
+  }
+
+  &__phone {
+    width: 142px;
+  }
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}
